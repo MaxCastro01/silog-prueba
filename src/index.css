@@ -1,0 +1,56 @@
+@import 'tailwindcss';
+@import '@fontsource/lexend/400.css';
+@import '@fontsource/lexend/700.css';
+@import '@fontsource/overpass/800.css';
+@import '@fontsource/overpass/900.css';
+
+/* Mundo: letreros de carretera. Verde de letrero, blanco reflejante, amarillo preventivo, asfalto.
+   Fondo claro y tinta oscura: se usa al sol, en el campo. */
+@theme {
+  --font-sans: 'Lexend', system-ui, sans-serif;
+  --font-senal: 'Overpass', 'Lexend', system-ui, sans-serif; /* derivada de la letra de carretera */
+  --color-fondo: #e9eee9;
+  --color-hoja: #ffffff;
+  --color-tinta: #161b18;
+  --color-tinta-2: #44504a;
+  --color-linea: #cfd8d1;
+  --color-campo: #00613f; /* verde de letrero */
+  --color-campo-hondo: #00492f;
+  --color-campo-claro: #dbeae1;
+  --color-maiz: #f5c211; /* amarillo preventivo */
+  --color-maiz-claro: #fdf1c4;
+  --color-asfalto: #24282b;
+  --color-asfalto-claro: #3a3f43;
+  --color-pierde: #a3241b;
+  --color-pierde-claro: #f8e1dd;
+  --color-gana: #00613f;
+}
+
+html { font-size: 20px; }
+body {
+  @apply bg-fondo text-tinta font-sans leading-snug antialiased;
+  caret-color: var(--color-campo);
+  accent-color: var(--color-campo);
+}
+h1, h2, h3 { font-family: var(--font-senal); letter-spacing: -0.01em; }
+::placeholder { color: var(--color-tinta-2); }
+::selection { background: var(--color-maiz); color: var(--color-tinta); }
+:focus-visible { outline: 3px solid var(--color-maiz); outline-offset: 2px; }
+a { text-underline-offset: 0.2em; }
+
+/* La firma del mundo: el filo blanco reflejante metido en el borde del letrero. */
+.letrero {
+  background: var(--color-campo);
+  color: #fff;
+  border-radius: 1rem;
+  outline: 3px solid #fff;
+  outline-offset: -9px;
+  box-shadow: 0 10px 24px -12px rgb(0 0 0 / 0.45);
+}
+.letrero :focus-visible { outline-color: var(--color-maiz); }
+
+@media print {
+  .no-imprimir { display: none !important; }
+  html { font-size: 12px; }
+  body { background: white; }
+}

@@ -1,0 +1,33 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Capturas de revisión de Impeccable
+.impeccable/review/
+
+# Base de datos local (PGlite) de npm run dev
+.datos/
+
+# Túnel de la IA local: lleva la contraseña, no se sube
+ollama.yaml

@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/ia.ts": { "maxDuration": 60 },
+    "api/datos.ts": { "maxDuration": 15 },
+    "api/cuenta.ts": { "maxDuration": 15 }
+  }
+}

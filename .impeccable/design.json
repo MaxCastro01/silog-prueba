@@ -1,0 +1,31 @@
+{
+  "world": "letreros de carretera",
+  "colors": {
+    "campo": "#00613f",
+    "campo-hondo": "#00492f",
+    "campo-claro": "#dbeae1",
+    "maiz": "#f5c211",
+    "maiz-claro": "#fdf1c4",
+    "asfalto": "#24282b",
+    "asfalto-claro": "#3a3f43",
+    "fondo": "#e9eee9",
+    "tinta": "#161b18",
+    "tinta-2": "#44504a",
+    "pierde": "#a3241b"
+  },
+  "fonts": {
+    "display": "Overpass 800/900",
+    "body": "Lexend 400/700"
+  },
+  "base": "20px",
+  "signatures": [
+    ".letrero inset reflective border",
+    "Escudo route shield",
+    "sign posts",
+    "SALIDA tabs"
+  ],
+  "surfaces": {
+    "portada": "persuade",
+    "app": "operate"
+  }
+}

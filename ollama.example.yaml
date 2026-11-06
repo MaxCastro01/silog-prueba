@@ -1,0 +1,18 @@
+# Túnel de ngrok para que la app publicada (Vercel) llegue a tu Ollama.
+# 1. Copia este archivo como ollama.yaml (ese nombre no se sube a GitHub).
+# 2. Cambia TU_CONTRASENA por una contraseña larga y la misma en OLLAMA_TOKEN (Vercel).
+# 3. npm run tunel
+on_http_request:
+  # Sin la contraseña, ngrok rechaza la petición y nunca llega a tu computadora.
+  - expressions:
+      - "!hasReqHeader('Authorization') || getReqHeader('Authorization')[0] != 'Bearer TU_CONTRASENA'"
+    actions:
+      - type: deny
+        config:
+          status_code: 401
+  # Ollama solo acepta peticiones dirigidas a localhost.
+  - actions:
+      - type: add-headers
+        config:
+          headers:
+            host: localhost

@@ -1,0 +1,37 @@
+Mi Ciclo - version 5: MedPlant (analisis de la foto de una planta) junto a Bitacora
+
+Copia estos archivos sobre los del proyecto, respetando las carpetas. Hay CUATRO archivos nuevos:
+  src/pantallas/MedPlant.tsx, src/pantallas/MedPlant.test.tsx, tests/entorno.test.ts y ollama.example.yaml.
+Estos archivos reemplazan por completo los de las versiones anteriores.
+
+Despues: npm install  y  npm test  (deben pasar 94 pruebas).
+Reinicia npm run dev (Ctrl+C y de nuevo) y entra a la pestana nueva "MedPlant", junto a Bitacora.
+
+Para que MedPlant analice de verdad necesita una IA que VEA imagenes:
+  - IA externa:  IA_MODELO=gpt-4o-mini (u otro con vision)  o IA_MODELO_VISION=...
+  - IA local:    ollama pull qwen2.5vl:7b   (ve menos que una IA externa)
+Sin IA conectada muestra un resultado fijo marcado "Ejemplo".
+
+Archivos:
+  src/lib/hechos.test.ts
+  src/lib/hechos.ts
+  src/pantallas/PonteEnVerde.tsx
+  src/pantallas/Preguntale.tsx
+  src/lib/ia-tareas.ts
+  src/lib/ia.test.ts
+  src/lib/ia.ts
+  PRODUCT.md
+  src/pantallas/Bitacora.tsx
+  src/pantallas/Gasto.tsx
+  .gitignore
+  src/App.tsx
+  .env.example
+  package.json
+  vite.config.ts
+  tests/servidor.test.ts
+  api/ia.ts
+  README.md
+  ollama.example.yaml  (NUEVO)
+  tests/entorno.test.ts  (NUEVO)
+  src/pantallas/MedPlant.tsx  (NUEVO)
+  src/pantallas/MedPlant.test.tsx  (NUEVO)
